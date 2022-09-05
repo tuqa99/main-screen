@@ -24,7 +24,7 @@ class _MySecondScreenState extends State<MySecondScreen> {
           ElevatedButton(
             onPressed: (){
             setState(() {
-              Navigator.pop(context, MaterialPageRoute(builder: (context) {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return MyApp();
               },));
             });
