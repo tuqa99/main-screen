@@ -14,7 +14,7 @@ class _MyFirstScreenState extends State<MyFirstScreen> {
   String selectItems = 'Higher school';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Color.fromARGB(255, 28, 58, 224),
       appBar: AppBar(),
       body: Center(
         child: Column(
@@ -36,11 +36,11 @@ class _MyFirstScreenState extends State<MyFirstScreen> {
                 child: Text('backe to the home page')),
             Center(
               child: Row(
-                children: [Text( 'choese your state : ', style: TextStyle(fontSize: 11),), SizedBox(width: 33,),
+                children: [Text( 'choese your state : ', style: TextStyle(fontSize: 15 ,),), SizedBox(width: 33,),
                   DropdownButton(
                       value: selectItems,
                       items: myItems
-                          .map((e) => DropdownMenuItem(value: e, child: Text("${e}")))
+                          .map((e) => DropdownMenuItem(value: e, child: Text("${e}" , style: TextStyle(fontSize: 20),)))
                           .toList(),
                       onChanged: ((val) {
                         setState(() {

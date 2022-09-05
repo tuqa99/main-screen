@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import './Screens/firstscreen.dart';
 import './Screens/secondscreen.dart';
@@ -28,60 +26,80 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   @override
-  String Mytestgrroupvalue ='';
+  String Mytestgrroupvalue = '';
   Widget build(BuildContext context) {
-    return  Scaffold(
-        appBar: AppBar(),
-        body: Container(
-          padding: EdgeInsets.all(20),
-          child: Column(children: [
-            MaterialButton(
-              color: Colors.amber,
-              onPressed: () {
-                setState(() {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
+    return Scaffold(
+      backgroundColor: Colors.blue[700],
+      appBar: AppBar(title: Text('genius child'),
+     
+      
+        backgroundColor: Colors.redAccent,
+       
+      ),
+      body: Center(
+        child: Container(
+            
+            child: Column(mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              CircleAvatar(
+                maxRadius: 100,
+                backgroundImage: NetworkImage(
+                    'https://media.istockphoto.com/vectors/little-smart-student-experiencing-magnet-vector-id1180269505?k=20&m=1180269505&s=612x612&w=0&h=FCZ58xxTNkoFw0aeJQlIxthPg5XsOHnFDE4GNH4tpZ0='),
+              ),
+              MaterialButton(
+                color: Colors.amber,
+                onPressed: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return MyFirstScreen();
+                        },
+                      ),
+                    );
+                  });
+                },
+                child: const Text(
+                  ' Electrical World',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+              ),
+              SizedBox(height: 44,),
+              CircleAvatar(
+                maxRadius: 100,
+                backgroundImage: NetworkImage(
+                    'https://media.istockphoto.com/vectors/vector-illustration-of-flat-robot-vector-id949215978?k=20&m=949215978&s=612x612&w=0&h=QjYsrQRv_xjw-A5-kgV3ZzFFYOzWUMEqbgVnFS3s51c='),
+              ),
+              MaterialButton(
+                color: Colors.redAccent,
+                onPressed: () {
+                  setState(() {
+                    Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
-                        return MyFirstScreen();
+                        return MySecondScreen();
                       },
-                    ),
-                  );
-                });
-              },
-              child: const Text(
-                ' go to the 1st screen',
-                style: TextStyle(fontSize: 30, color: Colors.black54),
+                    ));
+                  });
+                },
+                child: const Text(
+                  ' Robtics',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
               ),
-            ),
-            MaterialButton(
-              color: Colors.redAccent,
-              onPressed: () {
-                setState(() {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return MySecondScreen();
-                  },));
-                });
-              },
-              child: const Text(
-                ' go to the 2nd screen',
-                style: TextStyle(fontSize: 30, color: Colors.black54),
-              ),
-            ),
-            // RadioListTile(title: Text('femal'),
-            //   value: 'femal', groupValue: Mytestgrroupvalue, onChanged:(val) {
-            //   setState(() { Mytestgrroupvalue.toString();
-                
-            //   });
-            // },),
-            //    RadioListTile(title: Text('meal'),
-            //     value: 'femal', groupValue: Mytestgrroupvalue, onChanged:(val) {
-            //   setState(() { Mytestgrroupvalue.toString();
-                
-            //   });
-            // },),
-          ]),
-        
+              // RadioListTile(title: Text('femal'),
+              //   value: 'femal', groupValue: Mytestgrroupvalue, onChanged:(val) {
+              //   setState(() { Mytestgrroupvalue.toString();
+
+              //   });
+              // },),
+              //    RadioListTile(title: Text('meal'),
+              //     value: 'femal', groupValue: Mytestgrroupvalue, onChanged:(val) {
+              //   setState(() { Mytestgrroupvalue.toString();
+
+              //   });
+              // },),
+            ])),
       ),
     );
   }
