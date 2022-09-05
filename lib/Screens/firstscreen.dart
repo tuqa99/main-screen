@@ -26,7 +26,7 @@ class _MyFirstScreenState extends State<MyFirstScreen> {
             ElevatedButton(
                 onPressed: () {
                   setState(() {
-                    Navigator.push(context, MaterialPageRoute(
+                    Navigator.pop(context, MaterialPageRoute(
                       builder: (context) {
                         return MyApp();
                       },

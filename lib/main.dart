@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
               color: Colors.amber,
               onPressed: () {
                 setState(() {
-                  Navigator.push(
+                  Navigator.pop(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
               color: Colors.redAccent,
               onPressed: () {
                 setState(() {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  Navigator.pop(context, MaterialPageRoute(builder: (context) {
                     return MySecondScreen();
                   },));
                 });
